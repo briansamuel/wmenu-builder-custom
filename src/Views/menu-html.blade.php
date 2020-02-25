@@ -22,7 +22,7 @@ $currentUrl = url()->current();
 									<span class="submit-btn">
 										<input type="submit" class="button-secondary" value="Choose">
 									</span>
-									<span class="add-new-menu-action"> or <a href="{{ $currentUrl }}?action=edit&menu=0">Create new menu</a>. </span>
+									<span class="add-new-menu-action"> or <a href="{{ $currentUrl }}">Create new menu</a>. </span>
 								</form>
 							</div>
 							<div id="nav-menus-frame">
@@ -82,7 +82,8 @@ $currentUrl = url()->current();
 
 								</div>
 								@endif
-								<div id="menu-management-liquid">
+								<div id="">
+								{{--<div id="menu-management-liquid">--}}
 									<div id="menu-management">
 										<form id="update-nav-menu" action="" method="post" enctype="multipart/form-data">
 											<div class="menu-edit ">
@@ -91,6 +92,13 @@ $currentUrl = url()->current();
 														<label class="menu-name-label howto open-label" for="menu-name"> <span>Name</span>
 															<input name="menu-name" id="menu-name" type="text" class="menu-name regular-text menu-item-textbox" title="Enter menu name" value="@if(isset($indmenu)){{$indmenu->name}}@endif">
 															<input type="hidden" id="idmenu" value="@if(isset($indmenu)){{$indmenu->id}}@endif" />
+														</label>
+
+														<label class="menu-name-label howto open-label" for="menu-name">
+															<select name="menu-language" id="menu-language" class="menu-language regular-text menu-item-textbox">
+																<option value="vi" <?= isset($indmenu) && $indmenu->language === 'vi' ? 'selected' : '' ?>>Tiếng Việt</option>
+																<option value="en" <?= isset($indmenu) && $indmenu->language === 'en' ? 'selected' : '' ?>>Tiếng Anh</option>
+															</select>
 														</label>
 
 														@if(request()->has('action'))

@@ -14,7 +14,7 @@ class WMenu
     {
         $menu = new Menus();
         $menuitems = new MenuItems();
-        $menulist = $menu->select(['id', 'name'])->get();
+        $menulist = $menu->select(['id', 'name', 'language'])->get();
         $menulist = $menulist->pluck('name', 'id')->prepend('Select menu', 0)->all();
 
         //$roles = Role::all();

@@ -18,4 +18,9 @@ class Menus extends Model
         return self::where('name', '=', $name)->first();
     }
 
+    public static function byLanguage($lang)
+    {
+        return self::where('language', '=', $lang)->first();
+    }
+
 }

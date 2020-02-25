@@ -1,17 +1,12 @@
 {
-    "name": "vanvu/laravel-menu",
-    "description": "drag and drop menu generator like wordpress for laravel 5, support multi language",
-    "keywords": ["Laravel", "Menu", "Wordpress", "Builder"],
+    "name": "manhthang/laravel-menu",
+    "description": "drag and drop menu generator like wordpress for laravel 5",
+    "keywords": ["Laravel", "Menu", "Wordpress", "Builder", "Multiple Language"],
     "authors": [
     	{
-            "name": "Dinh Van Vu",
-            "email": "dinhvanvu94@gmail.com",
+            "name": "Manh Thang",
+            "email": "phammanhthang95@gmail.com",
             "role": "Developer"
-        },
-        {
-            "name": "Pham Manh Thang",
-            "email": "phammanhthang@gmail.com",
-            "role" : "Original Developer"
         }
     ],
     "require": {
@@ -20,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Harimayco\\Menu\\": "src/"
+          "Harimayco\\Menu\\": "packages/manhthang/laravel-menu/src"
         }
     },
     "extra": {

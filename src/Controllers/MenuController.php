@@ -17,6 +17,7 @@ class MenuController extends Controller
 
         $menu = new Menus();
         $menu->name = request()->input("menuname");
+        $menu->language = request()->input("menulanguage");
         $menu->save();
         return json_encode(array("resp" => $menu->id));
     }
@@ -88,6 +89,7 @@ class MenuController extends Controller
     {
         $menu = Menus::find(request()->input("idmenu"));
         $menu->name = request()->input("menuname");
+        $menu->language = request()->input("menulanguage");
 
         $menu->save();
         if (is_array(request()->input("arraydata"))) {
